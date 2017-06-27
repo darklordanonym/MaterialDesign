@@ -28,7 +28,6 @@ public class main_slider extends Fragment {
         return mainSlider;
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_sliding_tabs, container, false);
