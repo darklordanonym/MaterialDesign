@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:title="Setting"
+    android:id="@+id/navigate"
+     />
+    <item
+        android:id="@+id/next"
+        android:title="@string/next"
+        android:icon="@drawable/ic_navigate_next_black_24dp"
+        android:orderInCategory="200"
+        app:showAsAction="always"
+        />
+</menu>
