@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.onMen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_actionbar);
+        setContentView(R.layout.activity_main);
 
         /******set drawer text fonts******/
         this.drawerEmail=(TextView)findViewById(R.id.drawer_mail);
@@ -80,9 +80,8 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.onMen
 
         this.mViewPager=(ViewPager) findViewById(R.id.pager);
         this.mSlidingTabLayout=(SlidingTabLayout) findViewById(R.id.tabs);
-        this.mSlingTabAdapter=new SlingTabAdapter(getSupportFragmentManager(),this);
+        this.mSlingTabAdapter=new SlingTabAdapter(getSupportFragmentManager(),this,2);
         this.mViewPager.setAdapter(this.mSlingTabAdapter);
-        this.mSlidingTabLayout.setCustomTabView(R.layout.tab_view,R.id.tab_view_content);
         this.mSlidingTabLayout.setViewPager(this.mViewPager);
 
     }
