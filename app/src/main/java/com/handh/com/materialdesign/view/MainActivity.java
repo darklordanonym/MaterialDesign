@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.onMen
 
         this.recyclerView=(RecyclerView) findViewById(R.id.rec_drawer);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         this.menuAdapter=new MenuAdapter(this.menuItemList,this);
         this.menuAdapter.setItemClickCallback(this);
         this.recyclerView.setAdapter(this.menuAdapter);
@@ -83,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.onMen
         this.mViewPager.setAdapter(this.mSlingTabAdapter);
         this.mTabLayout=(TabLayout) findViewById(R.id.tabs);
         this.mTabLayout.setupWithViewPager(this.mViewPager);
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
