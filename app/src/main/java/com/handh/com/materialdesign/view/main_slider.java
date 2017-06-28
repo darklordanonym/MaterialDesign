@@ -19,6 +19,10 @@ public class main_slider extends Fragment {
 
     private TextView content;
 
+    public main_slider()
+    {
+    }
+
     public static main_slider getInstance(int position)
     {
         main_slider mainSlider=new main_slider();

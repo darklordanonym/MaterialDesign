@@ -3,6 +3,7 @@ package com.handh.com.materialdesign.view;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +22,6 @@ import com.handh.com.materialdesign.adapters.MenuAdapter;
 import com.handh.com.materialdesign.adapters.SlingTabAdapter;
 import com.handh.com.materialdesign.model.MenuData;
 import com.handh.com.materialdesign.model.MenuModel;
-import com.handh.com.materialdesign.tabs.SlidingTabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.onMen
     private TextView drawerName,drawerEmail,drawerMenuText;
     private ViewPager mViewPager;
     private SlingTabAdapter mSlingTabAdapter;
-    private SlidingTabLayout mSlidingTabLayout;
+    private TabLayout mTabLayout;
 
     /************Drawer Menu setting*********/
     private final static String[] menuText={"Profile","Setting"};
@@ -79,10 +79,10 @@ public class MainActivity extends AppCompatActivity implements MenuAdapter.onMen
         /************SlidingTab***************/
 
         this.mViewPager=(ViewPager) findViewById(R.id.pager);
-        this.mSlidingTabLayout=(SlidingTabLayout) findViewById(R.id.tabs);
         this.mSlingTabAdapter=new SlingTabAdapter(getSupportFragmentManager(),this,2);
         this.mViewPager.setAdapter(this.mSlingTabAdapter);
-        this.mSlidingTabLayout.setViewPager(this.mViewPager);
+        this.mTabLayout=(TabLayout) findViewById(R.id.tabs);
+        this.mTabLayout.setupWithViewPager(this.mViewPager);
 
     }
     @Override

@@ -29,7 +29,7 @@ public class SlingTabAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        main_slider mainSlider=main_slider.getInstance(position);
+        main_slider mainSlider=main_slider.getInstance(position+1);
         return mainSlider;
     }
 
